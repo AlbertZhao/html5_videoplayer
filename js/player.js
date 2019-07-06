@@ -50,51 +50,7 @@ function stop(){
 
 
 
-function next()
-{
-	var url=document.getElementById('video').src,x;
-	url=String(url);
-	if(url.length)
-	{
-		for(var i=0;i<url.length;i++) 
-		{
-			x=url.charAt(i);
-	  		if(x>='1'&&x<='9')
-	  		{
-	  			x=parseInt(x);
-	  			break;
-	  		}
-		}
-		x=x+1;
-		if(x>6) x=x%6;
-	}
-	else x=1;
-	url="videos/" + x + ".mp4";
-	document.getElementById('video').src=url;
-}
 
-function prev()
-{
-	var url=document.getElementById('video').src,x;
-	url=String(url);
-	if(url.length)
-	{
-		for(var i=0;i<url.length;i++) 
-		{
-			x=url.charAt(i);
-	  		if(x>='1'&&x<='9')
-	  		{
-	  			x=parseInt(x);
-	  			break;
-	  		}
-		}
-		x=x-1;
-		if(!x) x=6;
-	}
-	else x=1;
-	url="videos/" + x + ".mp4";
-	document.getElementById('video').src=url;
-}
 
 
 var upCounts=localStorage.getItem("upCounts")!=null?localStorage.getItem("upCounts"):0;
