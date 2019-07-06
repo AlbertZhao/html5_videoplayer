@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Player</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+	<link rel="stylesheet" href="../css/playerstyle.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="header clearfix text-center">
+					<h3 class="text-muted ">This is my first HTML5 video player.</h3>
+				</div>
+				<hr>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-7">
+
+				<div class="wrapper">
+					<div class="videowrapper">
+							<video id="video"  preload="metadata"  style="width: 100%; height: 100%; background-color: rgb(0, 0, 0);">
+							<source src="../files/5.mp4" type="video/mp4">
+							Your browser does not support HTML5 video.
+						</video>
+
+					</div>
+					<div class="row" style="margin-left: auto" >
+						<button type="button" id="btnPlay" class="btn btn-success pull-right icon-play-circle" style="margin-right: 20px;" onclick="start();"></button>
+						<button type="button" id="btnPause" class="btn btn-success pull-right icon-pause" style="margin-right: 20px;" onclick="pause();"></button>
+						<button type="button" id="btnVolumeUp" class="btn btn-success pull-right icon-volume-up" style="margin-right: 20px;" onclick="volumeUp();"></button>
+						<button type="button" id="btnVolumeDown" class="btn btn-success pull-right icon-volume-down" style="margin-right: 20px;" onclick="volumeDown();"></button>
+						<button type="button" id="btnStop" class="btn btn-success pull-right icon-stop" style="margin-right: 20px;" onclick="stop();"></button>
+						<button type="button" id="btnHeadPhones" class="btn btn-success pull-right icon-headphones" style="margin-right: 20px;" onclick="enableMute();"></button>
+						<button type="button" id="btnHandUp" class="btn btn-success pull-right icon-hand-up" style="margin-right: 20px;" onclick="up();">
+							<span id="span_up"></span>
+						</button>
+						<button type="button" id="btnHandDown" class="btn btn-success pull-right icon-hand-down" style="margin-right: 20px;" onclick="down();">
+							<span id="span_down"></span>
+						</button>
+					</div>
+				</div>
+		    </div>
+		    <div class="col-sm-4" style="align-self: auto">
+				<div class="row"></div>
+				<div class="row"></div>
+				<div class="row"></div>
+
+				<div class="row playlist">
+					<li> <span class="playlistItem" id="item1">Introduction to HTML5 </span></li>
+					<li> <span class="playlistItem" id="item2">Introduction to Styling with CSS3</span> </li>
+					<li> <span class="playlistItem" id="item3">Introduction to Bootstrap 4</span> </li>
+					<li> <span class="playlistItem" id="item4">Learn to create website with HTML5, CSS3 and Bootstrap4</span></li>
+					<li> <span class="playlistItem" id="item5">Introduction to Javascript</span> </li>
+				</div>
+			</div>
+      	</div>
+		<div class="row">
+			<div class="col">
+				<hr>
+			</div>
+		</div>
+	</div>
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<script src="../js/player.js"></script>
+</body>
+</html>
